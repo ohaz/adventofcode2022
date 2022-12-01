@@ -35,4 +35,4 @@ def task1():
 
 def task2():
     sums = sorted(calculate_sums(get_input()))
-    return sums[-1] + sums[-2] + sums[-3]
+    return sum(sums[-3:])
