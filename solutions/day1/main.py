@@ -28,11 +28,10 @@ def calculate_sums(lines):
             sums.append(0)
             continue
         sums[-1] += int(line)
-    return sums
+    return sorted(sums)
 
 def task1():
-    return max(calculate_sums(get_input()))
+    return sum(calculate_sums(get_input())[-1:])
 
 def task2():
-    sums = sorted(calculate_sums(get_input()))
-    return sum(sums[-3:])
+    return sum(calculate_sums(get_input())[-3:])
